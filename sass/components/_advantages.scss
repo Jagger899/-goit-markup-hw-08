@@ -1,0 +1,112 @@
+// стили без адаптивки
+
+// .advantages {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+
+// .advantages-list {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .advantages-item {
+//   width: 270px;
+//   margin-right: 30px;
+//   margin-bottom: 30px;
+
+//   &:nth-child(4n) {
+//     margin-right: 0px;
+//   }
+//   &:nth-last-child(-n + 4) {
+//     margin-bottom: 0px;
+//   }
+// }
+
+// .advantages-icon {
+//   background-color: $secondary-bg-color;
+//   margin-bottom: 30px;
+//   height: 120px;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .advantages-title {
+//   color: $title-text-color;
+//   font-weight: $bold-font-weight;
+//   font-size: $primary-font-size;
+//   line-height: 1.14;
+//   text-transform: uppercase;
+
+//   margin-top: 0px;
+//   margin-bottom: 10px;
+// }
+
+// .advantages-text {
+//   line-height: 1.71;
+
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+// }
+
+.advantages {
+  padding: 60px 0px;
+}
+
+.advantages-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.advantages-item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
+.advantages-item {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
+}
+
+.advantages-icon {
+  background-color: $secondary-bg-color;
+  margin-bottom: 30px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages-title {
+  color: $title-text-color;
+  font-size: $primary-font-size;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.advantages-text {
+  line-height: 1.71;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
